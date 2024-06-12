@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./timetable.css">
+    <link rel="stylesheet" href="./topbar-style.css">
+</head>
+<body>
+   <!-- 상단바 -->
+   <div class="top-bar">
+    <div class="top-title-con">
+        <a href="./home-page.html">
+            <img src="./img/로고.png" alt="" width="120px">
+        </a>
+    </div>
+
+    <div class="top-menu-con">
+        <div class="menu-box">
+            <span class="menu" id="login">
+                <a href="./login.html">
+                    로그인
+                </a>
+            </span>
+        </div>
+        <div class="menu-box" id="service-box">
+            <span class="menu">서비스</span>
+            <div class="service">
+                Make plan
+                <span><a href="./calender.html">캘린더</a></span>
+                <span><a href="./timetable.html">시간표</a></span>
+                Exercise method
+                <span><a href="">운동법</a></span>
+                Diet control
+                <span><a href="">레시피</a></span>
+                <span><a href="">칼로리 계산기</a></span>
+            </div>
+        </div>
+        <div class="menu-box">
+            <span class="menu">그룹소개</span>
+        </div>
+        <div class="menu-box">
+            <span class="menu">좋아요</span>
+        </div>
+    </div>
+
+    <div class="top-option-con">
+        <span>
+            <a href=""><img class="option-img" src="./img/홈.png" alt=""></a>
+        </span>
+        <span>
+            <img class="option-img" src="./img/설정.png" alt="">
+        </span>
+        
+        <span>
+            <div id="user-box">
+                <img class="option-img" src="./img/사용자.png" alt="">
+                <div id="user">
+                    <br><br><br>
+                    <h3>로그인</h3>
+                    <button>login</button>
+                </div>
+            </div>
+        </span>
+            
+        </div>
+    </div>
+</div>
+    <div class="wrap">
+        <table id="timetable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th>토</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="day">07:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">08:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">09:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">10:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">11:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">12:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">13:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    </tr>
+                <tr>
+                    <td id="day">14:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">15:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">16:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">17:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">18:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">19:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">20:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">21:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+                <tr>
+                    <td id="day">22:00</td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                    <td class="schedule"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button id="save-btn">저장</button>
+        <button id="addschedule-btn">+ 일정 추가</button>
+
+        <div id="input-schedule">
+            <h3>새로운 일정 추가</h3>
+            <div>
+
+                <select name="yoil" id="yoil">
+                    <option>요일</option>
+                    <option value="0">일요일</option>
+                    <option value="1">월요일</option>
+                    <option value="2">화요일</option>
+                    <option value="3">수요일</option>
+                    <option value="4">목요일</option>
+                    <option value="5">금요일</option>
+                    <option value="6">토요일</option>
+                </select>
+                <select id="start-time" name="start-time" onchange="changeEndtime()">
+                    <option value="">시작 시간</option>
+                </select>
+                <select id="end-time" name="end-time">
+                    <option value="">끝나는 시간</option>
+                </select>
+            </div>
+            <p>
+                <input type="text" placeholder="제목" id="schedule-title">
+            </p>
+
+            <textarea placeholder="내용" id="schedule-detail"></textarea>
+            <p>
+                <button id="add-btn">추 가</button>
+            </p>
+            <button id="hide-btn">x</button>
+        </div>
+
+
+    </div>
+    <script>
+        let users = JSON.parse(localStorage.getItem('Users')) || [];
+        const schedules = document.getElementsByClassName('schedule');
+        let startTimeSelect = document.getElementById('start-time');
+        let endTimeSelect = document.getElementById('end-time');
+        const hideBtn = document.getElementById('hide-btn');
+        const inputSchedule = document.getElementById('input-schedule');
+        const addScheduleBtn = document.getElementById('addschedule-btn');
+        const saveBtn = document.getElementById('save-btn');
+        const addBtn = document.getElementById('add-btn');
+        let yoil = document.getElementById('yoil');
+        let title = document.getElementById('schedule-title');
+        let detail = document.getElementById('schedule-detail');
+        let timeTable = document.getElementById('timetable')
+        let userNum = null;
+        const colorArr = ["#ffe9e9","#dee8f6","#fff8cc","#dcf2e9","#dceef2","#ffedda","#eff9cc","rgb(205, 187, 221)"];
+        let colornum = 0;
+
+        // 로그인되어 있는 회원 조회
+        for(let i=0; i<users.length; i++){
+            if(users[i].login==true){
+                userNum = i;
+                break;
+            }
+        }
+        let newSchedule = users[userNum];
+
+        let loginTxt = document.getElementById('login')
+        let userInfo = document.getElementById('user');
+
+        if (userNum != null){
+            // logOut();
+            loginTxt.innerHTML = "<a href=\"./home-page.html\">로그아웃</a>";
+            userInfo.innerHTML = `<h4>사용자 정보</h4>이름 : ${users[userNum].name}<br>${users[userNum].id}<br><p><button>로그아웃</button></p>`
+
+        }
+
+        // 유저 데이터 불러오기
+        
+        for(let i=0; i<16; i++){
+            for(let j=0;j<7;j++){
+                if(newSchedule.timetableSchedule[i][j][0] == 2){
+                    addSchedule(j, i, i+newSchedule.timetableSchedule[i][j][2], newSchedule.timetableSchedule[i][j][1], 1);
+                    // addSchedule(getYoil, getStartTime, getEndTime, getSchedule)
+                }
+            }
+        }
+
+        loginTxt.addEventListener('click', logOut);
+
+
+        function logOut(){
+            
+            users[userNum].login=false;
+            localStorage.setItem('Users', JSON.stringify(users));
+        }
+
+        hideBtn.addEventListener('click', () => {
+            inputSchedule.style.display = 'none';
+            addScheduleBtn.style.display = 'block';
+        })
+
+        addScheduleBtn.addEventListener('click', () =>{
+            inputSchedule.style.display = 'flex';
+            addScheduleBtn.style.display = 'none';
+        })
+
+        addBtn.addEventListener('click',()=>{
+            addSchedule(parseInt(yoil.value), parseInt(startTimeSelect.value)-7, parseInt(endTimeSelect.value)-7,`<div id='title-txt'>${title.value}</div><br><span id=detail-txt>${detail.value}</span>`, 0);
+        })
+    
+        for(let hour=7; hour<=22; hour++){
+            let newHour = new Option(hour+'시', hour);
+            startTimeSelect.append(newHour);
+        }
+
+        function changeEndtime(){
+            let options = endTimeSelect.options;
+            endTimeSelect.innerHTML = "";
+
+            firstOption = parseInt(startTimeSelect.value) + 1;
+            for(let hour=firstOption; hour<=23; hour++){
+                let newHour2 = new Option(hour+'시',hour);
+                endTimeSelect.append(newHour2);
+            }
+        }
+
+
+        function addSchedule(getYoil, getStartTime, getEndTime, getSchedule, road){
+            let timeGap = getEndTime - getStartTime;
+            let count = 0;
+            // 해당 시간에 일정이 있는지?
+            if(road == 0){
+                for(let i =0; i<timeGap; i++){
+                if((newSchedule.timetableSchedule[getStartTime+i][getYoil][0] == 1)||(newSchedule.timetableSchedule[getStartTime+i][getYoil][0] ==2)){
+                    console.log(newSchedule.timetableSchedule[getStartTime+i][getYoil][0]);
+                    alert('해당시간에는 일정이 이미 존재합니다.');
+                    return;
+                }
+            }
+            }
+
+            // table에 일정 표시
+            for(let i = 0; i<getYoil; i++){
+                if(newSchedule.timetableSchedule[getStartTime][i][0] == 1){
+                    count ++;
+                };    
+            }
+            
+            timeTable.rows[getStartTime+1].cells[getYoil-count+1].innerHTML = getSchedule;
+            timeTable.rows[getStartTime+1].cells[getYoil-count+1].rowSpan = timeGap;
+            timeTable.rows[getStartTime+1].cells[getYoil-count+1].style.backgroundColor = colorArr[colornum];
+            if(colornum == 7){
+                colornum =0;
+            }else{
+                colornum++;
+            }
+            if(timeGap>1){
+                for(let i=1; i<timeGap; i++){
+                    timeTable.rows[getStartTime+i+1].deleteCell(getYoil+1);
+                }
+            }
+
+            // 데이터 저장
+            newSchedule.timetableSchedule[getStartTime][getYoil] = [2, getSchedule, timeGap];
+            for(let i=0; i<timeGap-1; i++){
+                newSchedule.timetableSchedule[getStartTime+1+i][getYoil][0] = 1;
+            }
+
+        }
+
+        function save(){
+            users[userNum].timeTable = newSchedule.timeTable;
+            localStorage.setItem('Users', JSON.stringify(users));
+            alert('저장되었습니다.')
+        }
+
+        saveBtn.addEventListener('click',save);
+    
+    </script>
+
+</body>
+</html>
