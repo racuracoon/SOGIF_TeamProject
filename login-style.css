@@ -2,55 +2,8 @@ body{
     margin: 0;
 }
 
-.top-bar{
-    width: 100%;
-    height: 10vh;
-    background-color: white;
-    display: flex;
-    border-bottom: 1px solid darkgray;
-    z-index: 9999; /* 가장 위에 위치하도록 설정 */
-}
-
-.top-title-con{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width : 15%;
-    height: 100%;
-}
-
-.top-menu-con{
-    display: flex;
-    width: 60%;
-    height: 100%;
-    align-items: center;
-}
-
-.top-menu-con>span{
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0 40px;
-}
-
-.top-option-con{
-    width: 25%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 15px;
-}
-
-.top-option-con>span{
-    margin: 0 30px;
-}
-
-.top-option-con>span>img{
-    width: 25px;
-}
-
 .container{
-    height: 90vh;
+    height: 89.9vh;
     background-color: #f0f0f0;
 }
 
@@ -97,16 +50,6 @@ body{
     color: white;
 }
 
-.signup-box>button{
-    background-color: #92D050;
-    border: none;
-    border-radius: 15px;
-    height: 40px;
-    width: 90px;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-}
 
 input:focus {outline: none;}
 
@@ -115,18 +58,27 @@ input:focus {outline: none;}
 }
 
 #id{
+    border-width: 0;
     border-bottom: 1px solid #E2E2E2;
     margin-top: 30px;
     height: 50px;
     width: 500px;
-
+    font-size: 16px;
 }
 
 #pw{
+    border-width: 0;
     border-bottom: 1px solid #E2E2E2;
     margin-top: 30px;
     height: 50px;
     width: 500px;
+    font-size: 16px;
+
+}
+
+#login-form{
+    display: flex;
+    flex-direction: column;
 }
 
 input::placeholder {
@@ -142,13 +94,27 @@ form>div{
     margin-left: 30PX;
 }
 
-form>div>input{
+button{
     background-color: #92D050;
     border: none;
-    border-radius: 15px;
-    height: 40px;
-    width: 90px;
+    border-radius: 25px;
+    height: 50px;
+    width: 150px;
     color: white;
     font-size: 15px;
     font-weight: bold;
+}
+
+form>button{
+    position: relative;
+    top: 80px;
+    left: 175px;
+}
+
+button:hover{
+    background-color: rgb(124, 185, 59)
+}
+
+button:active{
+    background-color: #92D050;
 }
