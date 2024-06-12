@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./calender-style.css">
+    <link rel="stylesheet" href="./topbar-style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-title-con">
+            <a href="./home-page.html">
+                <img src="./img/로고.png" alt="" width="120px">
+            </a>
+        </div>
+
+        <div class="top-menu-con">
+            <div class="menu-box">
+                <span class="menu" id="login">
+                    <a href="./login.html">
+                        로그인
+                    </a>
+                </span>
+            </div>
+            <div class="menu-box" id="service-box">
+                <span class="menu">서비스</span>
+                <div class="service">
+                    <a href="">Make plan</a>
+                    <span><a href="./calender.html">캘린더</a></span>
+                    <span><a href="./timetable.html">시간표</a></span>
+                    Exercise method
+                    <span><a href="">운동법</a></span>
+                    Diet control
+                    <span><a href="">레시피</a></span>
+                    <span><a href="">칼로리 계산기</a></span>
+                </div>
+            </div>
+            <div class="menu-box">
+                <span class="menu">그룹소개</span>
+            </div>
+            <div class="menu-box">
+                <span class="menu">좋아요</span>
+            </div>
+        </div>
+
+        <div class="top-option-con">
+            <span>
+                <a href=""><img class="option-img" src="./img/홈.png" alt=""></a>
+            </span>
+            <span>
+                <img class="option-img" src="./img/설정.png" alt="">
+            </span>
+            
+            <span>
+                <div id="user-box">
+                    <img class="option-img" src="./img/사용자.png" alt="">
+                    <div id="user">
+                        <br><br><br>
+                        <h3>로그인</h3>
+                        <button>login</button>
+                    </div>
+                </div>
+            </span>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="container">
+            <div class="content-con">
+                <div class="calender-con">
+                    <input type="text" class="title" placeholder="TITLE" id="title" maxlength="8">
+                    <table name="calender">
+                        <thead>
+                            <tr>                               
+                                <td><</td>
+                                <td colspan="5" style="font-size: 25px;">June 2024</td>
+                                <td>></td>
+                            </tr>
+                        </thead>
+                        <div class="yoil">
+                            <tr>
+                                <td>S</td>
+                                <td>M</td>
+                                <td>T</td>
+                                <td>W</td>
+                                <td>T</td>
+                                <td>F</td>
+                                <td>S</td>
+                            </tr>
+                        </div>
+                        <tbody>
+                            <tr>
+                                <td id="color-gray">28</td>
+                                <td id="color-gray">29</td>
+                                <td id="color-gray">30</td>
+
+                                <td><button class="day">1</button></td>
+                                <td><button class="day">2</button></td>
+                                <td><button class="day">3</button></td>
+                                <td><button class="day">4</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="day">5</button></td>
+                                <td><button class="day">6</button></td>
+                                <td><button class="day">7</button></td>
+                                <td><button class="day">8</button></td>
+                                <td><button class="day">9</button></td>
+                                <td><button class="day">10</button></td>
+                                <td><button class="day">11</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="day">12</button></td>
+                                <td><button class="day">13</button></td>
+                                <td><button class="day">14</button></td>
+                                <td><button class="day">15</button></td>
+                                <td><button class="day">16</button></td>
+                                <td><button class="day">17</button></td>
+                                <td><button class="day">18</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="day">19</button></td>
+                                <td><button class="day">20</button></td>
+                                <td><button class="day">21</button></td>
+                                <td><button class="day">22</button></td>
+                                <td><button class="day">23</button></td>
+                                <td><button class="day">24</button></td>
+                                <td><button class="day">25</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="day">26</button></td>
+                                <td><button class="day">27</button></td>
+                                <td><button class="day">28</button></td>
+                                <td><button class="day">29</button></td>
+                                <td><button class="day">30</button></td>
+                                <td><button class="day">31</button></td>
+                                <td id="color-gray">1</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="plan-con">
+                    <div id="plan">
+                            <div id="plan-day">Day</div>
+                            <img src="./img/근육.png" alt="">
+                            <hr>
+                            <textarea name="" id="plan-exercise" spellcheck="false" ></textarea>
+                            <img src="./img/샐러드.png" alt="">
+                            <hr>
+                            <textarea name="" id="plan-diet" spellcheck="false" ></textarea>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <button id="save-btn">저장</button>
+    
+    <script>
+        let users = JSON.parse(localStorage.getItem('Users')) || [];
+        let days = document.getElementsByClassName('day');
+        let planExercise = document.getElementById('plan-exercise');
+        let planDiet = document.getElementById('plan-diet');
+        let addMemo = document.getElementById('add-memo');
+        let saveBtn = document.getElementById('save-btn');
+        let planDay = document.getElementById('plan-day');
+        let title = document.getElementById('title');
+        let loginTxt = document.getElementById('login')
+        let userInfo = document.getElementById('user');
+
+        let userNum = null;
+        // 로그인되어 있는 회원 조회
+        for(let i=0; i<users.length; i++){
+            if(users[i].login==true){
+                userNum = i;
+                break;
+            }
+        }
+
+        if (userNum != null){
+            // logOut();
+            loginTxt.innerHTML = "<a href=\"./home-page.html\">로그아웃</a>";
+            userInfo.innerHTML = `<h4>사용자 정보</h4>이름 : ${users[userNum].name}<br>${users[userNum].id}<br><p><button>로그아웃</button></p>`
+            loginTxt.addEventListener('click', logOut);
+        }
+
+        function logOut(){
+            
+            users[userNum].login=false;
+            localStorage.setItem('Users', JSON.stringify(users));
+        }
+
+        title.value = `${users[userNum].title}`;
+
+
+        let newExePlan = [];
+        let newDietPlan = [];
+
+        for(let i=0; i<31; i++){
+            newExePlan.push(users[userNum].plan[i][0]);
+            newDietPlan.push(users[userNum].plan[i][1]);
+        }
+            
+        let runningDay = null;
+        
+        for(let i = 0; i < days.length; i++){
+            days[i].addEventListener('click', () => {
+            // 이전에 선택된 day가 있다면 해당 day의 계획을 저장
+
+            if (runningDay !== null) {
+                days[runningDay].style.backgroundColor = '';
+                newExePlan[runningDay] = planExercise.value;
+                newDietPlan[runningDay] = planDiet.value;
+            }
+
+            // 현재 선택된 버튼의 배경색을 주황색으로 변경
+            days[i].style.backgroundColor = 'orange';
+            planDay.innerText = 'Jun ' + (i+1);
+            planExercise.value = `${newExePlan[i]}`;
+            planDiet.value = `${newDietPlan[i]}`;
+
+            runningDay = i;
+            });
+        }
+
+        function save(){
+            if (runningDay !== null) {
+                newExePlan[runningDay] = planExercise.value;
+                newDietPlan[runningDay] = planDiet.value;
+            }
+            for(let i =0; i<31; i++){
+                users[userNum].plan[i][0] = newExePlan[i];
+                users[userNum].plan[i][1] = newDietPlan[i];
+            }
+            users[userNum].title = title.value;
+            localStorage.setItem('Users', JSON.stringify(users));
+            alert('저장되었습니다.')
+        }
+
+        saveBtn.addEventListener('click', save);
+            
+        
+
+        
+    </script>
+</body>
+</html>
