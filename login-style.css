@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+}
+
+.container{
+    height: 89.9vh;
+    background-color: #f0f0f0;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    height: 600px;
+    width: 640px;
+    border-top: 6px solid #92D050;
+    box-shadow:  8px 8px 8px #E2E2E2;
+
+}
+
+.text{
+    color: #92D050;
+    margin: 70px 0 30px 80px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.signup-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    height: 540px;
+    width: 360px;
+    box-shadow:  8px 8px 8px #E2E2E2;
+    background-image: linear-gradient( rgba(35, 61, 116, 0.178), rgba(35, 61, 116, 0.178) ), url(./img/회원가입\ 배경.jpg);
+    background-repeat : no-repeat;
+    background-size : cover;
+    box-shadow:  8px 8px 8px #E2E2E2;
+}
+.signup-box>h3{
+    color: white;
+}
+
+
+input:focus {outline: none;}
+
+.no-border{
+    border-width: 0;
+}
+
+#id{
+    border-width: 0;
+    border-bottom: 1px solid #E2E2E2;
+    margin-top: 30px;
+    height: 50px;
+    width: 500px;
+    font-size: 16px;
+}
+
+#pw{
+    border-width: 0;
+    border-bottom: 1px solid #E2E2E2;
+    margin-top: 30px;
+    height: 50px;
+    width: 500px;
+    font-size: 16px;
+
+}
+
+#login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+input::placeholder {
+    font-size: 16px;
+    color: gray;
+}
+
+form>div{
+    display: flex;
+    justify-content: space-between;
+    width: 440px;
+    margin-top: 70px;
+    margin-left: 30PX;
+}
+
+button{
+    background-color: #92D050;
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    width: 150px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+form>button{
+    position: relative;
+    top: 80px;
+    left: 175px;
+}
+
+button:hover{
+    background-color: rgb(124, 185, 59)
+}
+
+button:active{
+    background-color: #92D050;
+}
