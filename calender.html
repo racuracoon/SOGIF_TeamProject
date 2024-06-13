@@ -10,7 +10,7 @@
 <body>
     <div class="top-bar">
         <div class="top-title-con">
-            <a href="./home-page.html">
+            <a href="./index.html">
                 <img src="./img/로고.png" alt="" width="120px">
             </a>
         </div>
@@ -183,7 +183,7 @@
 
         if (userNum != null){
             // logOut();
-            loginTxt.innerHTML = "<a href=\"./home-page.html\">로그아웃</a>";
+            loginTxt.innerHTML = "<a href=\"./index.html\">로그아웃</a>";
             userInfo.innerHTML = `<h4>사용자 정보</h4>이름 : ${users[userNum].name}<br>${users[userNum].id}<br><p><button>로그아웃</button></p>`
             loginTxt.addEventListener('click', logOut);
         }
