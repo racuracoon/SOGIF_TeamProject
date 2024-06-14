@@ -46,7 +46,7 @@
 
         <div class="top-option-con">
             <span>
-                <a href=""><img class="option-img" src="./img/홈.png" alt=""></a>
+                <a href="./index.html"><img class="option-img" src="./img/홈.png" alt=""></a>
             </span>
             <span>
                 <img class="option-img" src="./img/설정.png" alt="">
@@ -56,9 +56,8 @@
                 <div id="user-box">
                     <img class="option-img" src="./img/사용자.png" alt="">
                     <div id="user">
-                        <br><br><br>
                         <h3>로그인</h3>
-                        <button>login</button>
+                        <button id="login-link">login</button>
                     </div>
                 </div>
             </span>
@@ -171,6 +170,7 @@
         let title = document.getElementById('title');
         let loginTxt = document.getElementById('login')
         let userInfo = document.getElementById('user');
+        let loginLink = document.getElementById('login-link');
 
         let userNum = null;
         // 로그인되어 있는 회원 조회
@@ -184,14 +184,14 @@
         if (userNum != null){
             // logOut();
             loginTxt.innerHTML = "<a href=\"./index.html\">로그아웃</a>";
-            userInfo.innerHTML = `<h4>사용자 정보</h4>이름 : ${users[userNum].name}<br>${users[userNum].id}<br><p><button>로그아웃</button></p>`
+            userInfo.innerHTML = `<h4>사용자 정보</h4>이름 : ${users[userNum].name}<br>${users[userNum].id}`
             loginTxt.addEventListener('click', logOut);
         }
 
-        function logOut(){
-            
+        function logOut(){   
             users[userNum].login=false;
             localStorage.setItem('Users', JSON.stringify(users));
+            alert('로그아웃 되었습니다.')
         }
 
         title.value = `${users[userNum].title}`;

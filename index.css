@@ -11,7 +11,7 @@ body{
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./img/joging.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./img/joging.jpg);     /* 사진출처 : 어도비 express AI 그림으로 생성한 이미지 */
     background-repeat : no-repeat;
     background-size : cover;
 }
@@ -195,19 +195,19 @@ body{
 }
 
 #plan-img{
-    background-image: url(./img/계획사진.jpg);
+    background-image: url(./img/계획사진.jpg);  /* 사진출처 <a href="https://kr.freepik.com/free-photo/gieob-ingwa-gyeongjein-hoeui-beulein-seutoming-aidieo_15113199.htm#fromView=search&page=1&position=2&uuid=97b89483-48ad-4eb0-8e9c-75e1e1ab7663">작가 tirachardz 출처 Freepik</a>*/
     background-repeat : no-repeat;
     background-size : cover;
 }
 
 #exercise-img{
-    background-image: url(./img/운동\ 사진.jpg);
+    background-image: url(./img/운동\ 사진.jpg);    /* 사진출처 : 어도비 express AI 그림으로 생성한 이미지 */
     background-repeat : no-repeat;
     background-size : cover;
 }
 
 #food-img{
-    background-image: url(./img/식단사진.jpg);
+    background-image: url(./img/식단사진.jpg);      /* 사진출처 : <a href="https://kr.freepik.com/free-photo/dalg-gogi-abokado-oi-tomato-baechuleul-gyeotdeul-insig-i-saelleodeu_6648138.htm#fromView=search&page=2&position=10&uuid=7cd0fe7f-470b-4d0d-af3b-f054f5a52e3b">작가 timolina 출처 Freepik</a>*/
     background-repeat : no-repeat;
     background-size : cover;
 }
