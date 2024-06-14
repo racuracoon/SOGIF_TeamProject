@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+}
+.wrap{
+    padding-top: 50px;
+}
+.top-bar{
+    width: 100%;
+    position: fixed;
+    height: 10vh;
+    background-color: white;
+    display: flex;
+    border-bottom: 1px solid darkgray;
+    z-index: 9999; /* 가장 위에 위치하도록 설정 */
+}
+.top-title-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width : 15%;
+    height: 100%;
+}
+
+.top-menu-con{
+    display: flex;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+}
+
+.top-menu-con>span{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 40px;
+}
+
+.top-option-con{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+}
+
+.top-option-con>span{
+    margin: 0 30px;
+}
+
+.top-option-con>span>img{
+    width: 25px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.main-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-con > .text-box{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.mid-con{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 20px;
+}
+.mid-con> .text-box{
+    padding:23vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+
+.row-con{
+    display: flex;
+    flex-direction: column;
+}
+.img{
+    width: 40vh;
+    height: 40vh;
+    padding: 5vh;
+}
+
+.final-con{
+    display: flex;
+    flex-direction: column;
+    padding: 10vh;
+}
+#text5{
+    font-weight: bolder;
+    font-size: 20px;
+    padding-top: 4vh;
+}
+#text6{
+    font-size: 20px;
+}
+#text7{
+    font-weight: bolder;
+    font-size: 20px;
+    padding-top: 23vh;
+}
+#text8{
+    font-size: 20px;
+}
+#text9{
+    font-weight: bolder;
+    font-size: 20px;
+    padding-top: 20vh;
+}
+#text1{
+    font-size: 30px;
+}
+.text-box{
+    position: relative;   
+}
