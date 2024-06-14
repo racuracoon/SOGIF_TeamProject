@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>운동방법 &mdash; 고급편</title>
+    <link rel="stylesheet" href="./styles/video-page.css" />
+    <link rel="stylesheet" href="./topbar-style.css">
+    <script src="./scripts/show-videos.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        // 고급 페이지 셋업
+        init(document.querySelector(".videos"), "advanced");
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 상단바 -->
+    <div class="top-bar">
+        <div class="top-title-con">
+            <a href="./index.html">
+                <img src="./img/로고.png" alt="" width="120px">
+            </a>
+        </div>
+
+        <div class="top-menu-con">
+            <div class="menu-box">
+                <span class="menu" id="login">
+                    <a href="./login.html">
+                        로그인
+                    </a>
+                </span>
+            </div>
+            <div class="menu-box" id="service-box">
+                <span class="menu">서비스</span>
+                <div class="service">
+                    Make plan
+                    <span><a href="./calender.html">캘린더</a></span>
+                    <span><a href="./timetable.html">시간표</a></span>
+                    Exercise method
+                    <span><a href="./video-advanced.html">고급편</a></span>
+                    <span><a href="./video-intermediate.html">중급편</a></span>
+                    <span><a href="./video-beginner.html">초급편</a></span>
+                    Diet control
+                    <span><a href="./eat.html">식단소개</a></span>
+                    <span><a href="./health.html">기초대사량 계산기</a></span>
+                </div>
+            </div>
+            <div class="menu-box">
+                <span class="menu">그룹소개</span>
+            </div>
+            <div class="menu-box">
+                <span class="menu">좋아요</span>
+            </div>
+        </div>
+
+        <div class="top-option-con">
+            <span>
+                <a href="./index.html"><img class="option-img" src="./img/홈.png" alt=""></a>
+            </span>
+            <span>
+                <img class="option-img" src="./img/설정.png" alt="">
+            </span>
+            
+            <span>
+                <div id="user-box">
+                    <img class="option-img" src="./img/사용자.png" alt="">
+                    <div id="user">
+                        <h3>로그인</h3>
+                        <button id="login-link">login</button>
+                    </div>
+                </div>
+            </span>
+                
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+      <!-- 메인 화면 -->
+      <div class="container">
+        <div class="videos"></div>
+      </div>
+    </div>
+
+    <script>
+      let users = JSON.parse(localStorage.getItem('Users')) || [];
+      let userNum = null;
+      let loginTxt = document.getElementById('login')
+      let userInfo = document.getElementById('user');
+      let loginLink = document.getElementById('login-link');
+      // 로그인되어 있는 회원 조회
+      for(let i=0; i<users.length; i++){
+          if(users[i].login==true){
+              userNum = i;
+              break;
+          }
+      }
+
+      if (userNum != null){
+          loginTxt.innerHTML = "<a href=\"./index.html\">로그아웃</a>";
+          userInfo.innerHTML = `<h4>사용자 정보</h4><br>이름 : ${users[userNum].name}<br>${users[userNum].id}`
+          loginTxt.addEventListener('click', logOut);
+
+      }
+
+      loginLink.addEventListener('click', ()=>{
+        window.location.href = "./login.html";
+      })
+
+      function logOut(){
+          
+          users[userNum].login=false;
+          localStorage.setItem('Users', JSON.stringify(users));
+          alert('로그아웃 되었습니다.')
+      }
+
+
+  </script>
+</body>
+</html>
