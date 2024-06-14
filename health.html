@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기초 대사량 계산기</title>
+    <link rel="stylesheet" href="health.css">
+    <link rel="stylesheet" href="topbar-style.css">
+</head>
+<body>
+    <!-- 상단바 -->
+    <div class="top-bar">
+        <div class="top-title-con">
+            <a href="./index.html">
+                <img src="./img/로고.png" alt="" width="120px">
+            </a>
+        </div>
+
+        <div class="top-menu-con">
+            <div class="menu-box">
+                <span class="menu" id="login">
+                    <a href="./login.html">
+                        로그인
+                    </a>
+                </span>
+            </div>
+            <div class="menu-box" id="service-box">
+                <span class="menu">서비스</span>
+                <div class="service">
+                    Make plan
+                    <span><a href="./calender.html">캘린더</a></span>
+                    <span><a href="./timetable.html">시간표</a></span>
+                    Exercise method
+                    <span><a href="./video-advanced.html">고급편</a></span>
+                    <span><a href="./video-intermediate.html">중급편</a></span>
+                    <span><a href="./video-beginner.html">초급편</a></span>
+                    Diet control
+                    <span><a href="./eat.html">식단소개</a></span>
+                    <span><a href="./health.html">기초대사량 계산기</a></span>
+                </div>
+            </div>
+            <div class="menu-box">
+                <span class="menu">그룹소개</span>
+            </div>
+            <div class="menu-box">
+                <span class="menu">좋아요</span>
+            </div>
+        </div>
+
+        <div class="top-option-con">
+            <span>
+                <a href="./index.html"><img class="option-img" src="./img/홈.png" alt=""></a>
+            </span>
+            <span>
+                <img class="option-img" src="./img/설정.png" alt="">
+            </span>
+            
+            <span>
+                <div id="user-box">
+                    <img class="option-img" src="./img/사용자.png" alt="">
+                    <div id="user">
+                        <h3>로그인</h3>
+                        <button id="login-link">login</button>
+                    </div>
+                </div>
+            </span>
+                
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+
+        <div class="container">
+            <h1 id="text1">기초대사량 계산기</h1>
+            <div class="main-con">
+                <div class="text-box" id="text">
+                    기초대사량은 생명을 유지하는데 필요한 최소한의 에너지량을 말합니다.<br>
+                    체온유지나 호흡, 심장박동 등 기초적인 생명활동을 위한 신진대사에 쓰이는 에너지량으로 보통 휴식상태 또는 움직이지 않고
+                    가만히 있을 때<br>기초대사량만큼의 에너지를 소모됩니다.
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="cnter-box">
+                <div class="text-bo" id="text3">
+                    계산식
+                </div>
+                <div class="text-bo" id="text4">
+                    남자 : 66.47 + (13.75 × 체중) + (5 × 키) - (6.76 × 나이)
+                </div>
+                <div class="text-bo" id="text5">
+                    여자 : 655.1 + (9.56 × 체중) + (1.85 × 키) - (4.68 × 나이)
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row-box">
+                <span class="gender">성별</span>
+                <select name="성별" id="gender">
+                    <option value="">-선택-</option>
+                    <option value="남자">남자</option>
+                    <option value="여자">여자</option>
+                </select>
+            </div>
+
+            <div class="row-row-box">
+                <span class="input_title">신장</span>
+                <input type="text" id="height" placeholder="키 를 입력하세요.">
+                <span class="inner_text">cm</span>
+                <span class="input_title">체중</span>
+                <input type="text" id="weight" placeholder="몸무게를 입력하세요.">
+                <span class="inner_text">kg</span>
+                <span class="input_title">나이(만)</span>
+                <input type="text" id="age" placeholder="나이를 입력하세요.">
+                <span class="inner_text">세</span>
+            </div>
+
+            <div class="final-box">
+                <span class="input_title">기초대사량</span>
+                <span class="inner_text" id="bmrResult">Kcal</span>
+            </div>
+            
+            <div class="final-row-box">
+                <button onclick="calculateBMR()">계산하기</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let users = JSON.parse(localStorage.getItem('Users')) || [];
+        let userNum = null;
+        let loginTxt = document.getElementById('login')
+        let userInfo = document.getElementById('user');
+        let loginLink = document.getElementById('login-link')
+        // 로그인되어 있는 회원 조회
+        for(let i=0; i<users.length; i++){
+            if(users[i].login==true){
+                userNum = i;
+                break;
+            }
+        }
+
+        if (userNum != null){
+            // logOut();
+            loginTxt.innerHTML = "<a href=\"./home-page.html\">로그아웃</a>";
+            userInfo.innerHTML = `<h4>사용자 정보</h4>이름 : ${users[userNum].name}<br>${users[userNum].id}`
+            loginTxt.addEventListener('click', logOut);
+
+        }
+
+        loginLink.addEventListener('click', ()=>{
+            window.location.href = "./login.html";
+        })
+
+        function logOut(){
+            
+            users[userNum].login=false;
+            localStorage.setItem('Users', JSON.stringify(users));
+            alert('로그아웃 되었습니다.')
+        }
+        function calculateBMR() {
+            const gender = document.getElementById("gender").value;
+            const height = parseFloat(document.getElementById("height").value);
+            const weight = parseFloat(document.getElementById("weight").value);
+            const age = parseInt(document.getElementById("age").value);
+
+            let bmr;
+
+            if (gender === "남자") {
+                bmr = 66.47 + (13.75 * weight) + (5 * height) - (6.76 * age);
+            } else if (gender === "여자") {
+                bmr = 655.1 + (9.56 * weight) + (1.85 * height) - (4.68 * age);
+            } else {
+                alert("성별을 선택하세요.");
+                return;
+            }
+
+            document.getElementById("bmrResult").innerText = bmr.toFixed(2) + " Kcal";
+        }
+    </script>
+
+</body>
+</html>
